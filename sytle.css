@@ -1,0 +1,105 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+   
+}
+body{
+    background-color:yellowgreen;
+    font-family: "Saira", Arial, Helvetica, sans-serif;
+}
+h1{
+    margin: 30px 0px;
+    color: rgb(234, 234, 234);
+    font-size: 40px;
+    font-weight: 900;
+    text-align: center;
+    font-family: "Saira", serif;
+}
+h1 span{
+    font-weight: 300;
+}
+.date-piker{
+    position:relative;
+    
+    width: 100%;
+    max-width: 320px;
+    max-height: 60px;
+    margin: 30px auto; 
+    
+    background-color: #fff;
+    box-shadow: 0px 3px 10px rgb(0, 0, 0,2);
+    border-radius: 5px;
+
+    cursor: pointer;
+    user-select: none;
+    transition: transform 0.6s cubic-bezier(0.25, 1, 0.5, 1);
+}
+.date-piker:hover {
+    background-color: #f3f3f3;
+    transform: scale(1.1); 
+}
+.date-piker .dates{
+    display: none;
+    position:absolute;
+    top:100%;
+    left: 0;
+    right: 0;
+
+    background-color: #fff;
+
+
+}
+.date-piker .select-date{
+    display: flex;
+
+    height: 100%;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+
+    color: #313131;
+    font-size: 23px;
+
+}
+
+.date-piker .dates-active{
+    display: block;
+}
+.date-piker .dates .month{
+    display:flex;
+    justify-content:space-between;
+    align-items: center;
+    border-bottom:2px solid #eee;
+
+}
+.date-piker .dates .month .arrows {
+    display: flex;
+    width: 35px;
+    height: 35px;
+    justify-content:center;
+    align-items: center;
+
+    color: #313131;
+    font-size: 20px;
+
+}
+.date-piker .dates .month .arrows:hover{
+    background-color: #f3f3f3;
+}
+.date-piker .dates .month .arrows:active{
+    background-color: rgb(101, 252, 101);
+}
+.date-piker .dates .days{
+    display: grid;
+    grid-template-columns:repeat(7, 1fr);
+    height: 200px;
+
+}
+.date-piker .dates .days .day{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #313131;
+    
+}
